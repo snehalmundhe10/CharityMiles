@@ -1,0 +1,31 @@
+<div class ="container">
+  <form [formGroup]="formVar" (ngSubmit)="saveCampaign()">
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="goal">Goal</label>
+        <input type="text" class="form-control" formControlName="goal" placeholder="goal">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="campaignTitle">Campaign Title</label>
+        <input type="text" class="form-control" formControlName="campaignTitle" placeholder="campaign title">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="reason">Reason</label>
+      <input type="text" class="form-control" formControlName="reason" placeholder="reason">
+    </div>
+    <div class="form-group">
+      <label for="raiseMoneyFor">Who are you raising money for?</label>
+      <input type="text" class="form-control" formControlName="raiseMoneyFor" placeholder="Myself or someone else,Nonprofit or organization">
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="category">Category</label>
+        <input type="text" class="form-control" formControlName="category">
+      </div>   
+     </div>
+    <button type="submit" class="btn btn-primary" >Save Campaign</button>
+    <button type="submit" class="btn btn-primary" (click)="goBack()" >Go Back</button>
+  </form>
+
+</div>

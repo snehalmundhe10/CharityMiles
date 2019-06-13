@@ -1,0 +1,39 @@
+<h3>Create Your Own Campaign
+ <a [routerLink]="['/createcampaign']" class="camp">Create Campaign</a></h3>
+ <div class ="container">
+     <p>List of Stories</p>
+     <div *ngFor="let campaign of newcampaignList">
+            <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="goal">{{campaign.goal}}</label>
+                      <input type="text" class="form-control" formControlName="goal" placeholder="goal">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="campaignTitle">{{campaign.campaignTitle}}</label>
+                      <input type="text" class="form-control" formControlName="campaignTitle" placeholder="campaign title">
+                    </div>
+             </div>
+                  <div class="form-group">
+                    <label for="reason">{{campaign.reason}}</label>
+                    <input type="text" class="form-control" formControlName="reason" placeholder="reason">
+                  </div>
+                  <div class="form-group">
+                    <label for="raiseMoneyFor">{{campaign.raiseMoneyFor}}</label>
+                    <input type="text" class="form-control" formControlName="raiseMoneyFor" placeholder="Myself or someone else,Nonprofit or organization">
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="category">{{campaign.category}}</label>
+                      <input type="text" class="form-control" formControlName="category">
+                    </div>   
+                   </div>
+               
+         <div class="col-md-12 col-xs-12 col-sm-12 col-lg-12">
+            <a style="cursor: pointer;" (click)="onEditCampaign(campaign._id)" type="button" style="color: #fff;background-color:#6ca4e8;border-radius: 20px;border: none;font-size: 12px;padding: 8px 10px 8px 10px;display: inline-block"
+                class="btn">Edit Campaign</a>
+            <a style="cursor: pointer;" (click)="onDeleteCampaign(campaign)" type="button" style="color: #fff;background-color:#6ca4e8;border-radius: 20px;border: none;font-size: 12px;padding: 8px 10px 8px 10px;display: inline-block; float:right"
+                class="btn">Delete Campaign</a>
+        </div>
+
+     </div>
+      </div>

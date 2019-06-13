@@ -1,0 +1,22 @@
+$bgcolour: #f6f6f6;
+$textcolour: black;
+form{
+
+   margin-top: 30px;
+  input[type=text],input[type=password]
+  {
+    background-color: $bgcolour;
+  border: none;
+  color: $textcolour;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px;
+  width: 30%;
+  border: 2px solid $bgcolour;
+
+
+  }
+}
